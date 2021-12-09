@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+        <Button fx:id="buttonAdatokBetoltese" mnemonicParsing="false" onAction="#onButtonAdatokBetolteseClick" text="Adatok betöltése">
+            <VBox.margin>
+                <Insets bottom="20.0" left="20.0" top="20.0" />
+            </VBox.margin>
+        </Button>
+      <TitledPane animated="false" collapsible="false" minHeight="0.0" minWidth="0.0" prefHeight="206.0" prefWidth="750.0" text="Hibák a kiválasztott állományban">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <ListView fx:id="listViewHibak" prefHeight="180.0" prefWidth="700.0" />
+               </children></AnchorPane>
+        </content>
+      </TitledPane>
+      <HBox>
+         <children>
+            <TitledPane animated="false" collapsible="false" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="340.0" text="Derékszögű háromszögek">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                     <children>
+                        <ListView fx:id="listViewDerekszoguHaromszogek" onMouseClicked="#onListViewClick" layoutX="-4.0" prefHeight="154.0" prefWidth="340.0" />
+                     </children></AnchorPane>
+              </content>
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </TitledPane>
+            <TitledPane animated="false" collapsible="false" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="432.0" text="Kiválasztott derékszögű háromszögek adatai">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox fx:id="labelTerulet" layoutY="1.0" prefHeight="157.0" prefWidth="440.0">
+                           <children>
+                              <Label text="K" fx:id="LabelKerulet"/>
+                              <Label text="T" fx:id="LabelTerulet"/>
+                           </children>
+                        </VBox>
+                     </children></AnchorPane>
+              </content>
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </TitledPane>
+         </children>
+      </HBox>
+    </children>
+</VBox>
